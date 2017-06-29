@@ -11,6 +11,8 @@ checkpoint
 *.meta
 *.data*
 *plugins/
+data_batch*
+test_batch
 !.gitkeep
 
 
