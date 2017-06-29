@@ -1,0 +1,7 @@
+
+.python-version
+.DS_Store
+*.pyc
+!.gitkeep
+*.gz
+
