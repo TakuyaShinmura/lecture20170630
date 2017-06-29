@@ -3,10 +3,13 @@
 .DS_Store
 *.pyc
 *.gz
+*.tsv
+*.pbtxt
 events.out*
 checkpoint
 *.index
 *.meta
 *.data*
 !.gitkeep
+
 
