@@ -2,8 +2,11 @@
 .python-version
 .DS_Store
 *.pyc
-*data/
-*models/
-*logs/
+*.gz
+event.out*
+checkpoint
+*.index
+*.meta
+*.data*
 !.gitkeep
 
