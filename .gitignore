@@ -1,6 +1,7 @@
 
 .python-version
 .DS_Store
+*.png
 *.pyc
 *.gz
 *.tsv
