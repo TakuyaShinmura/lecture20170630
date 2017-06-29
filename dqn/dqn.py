@@ -40,9 +40,7 @@ def inference(input, scope_name, num_action):
 		with tf.variable_scope('conv2'):
 			conv2 = tf.layers.conv2d(conv1, 64, [15,15],[2,2], padding='same', activation=tf.nn.relu)
 		with tf.variable_scope('fc'):
-			shape = tf.shape(conv2)
-			flat = tf.reshape(conv2, shape=[-1, 40*53*64])
-			fc = tf.layers.dense(flat, 256,  activation=tf.nn.relu)
+			fc = tf.reduce_mean(conv2, [1, 2])
 		with tf.variable_scope('out'):
 			out = tf.layers.dense(fc, num_action)
 
@@ -174,7 +172,7 @@ def main(argv):
 							sess.run(update_op)
 							print('update at %d step' % step)
 						if step % SAVE_EVERY_N == 0:
-							saver.save(sess, FLAGS.model_dir+my_model, global_step=step)
+							saver.save(sess, FLAGS.model_dir+'my_model', global_step=step)
 							print('saved as %d step' % step)
 		else:
 			print(env.action_space.n)
