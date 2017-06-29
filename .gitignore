@@ -3,7 +3,7 @@
 .DS_Store
 *.pyc
 *.gz
-event.out*
+events.out*
 checkpoint
 *.index
 *.meta
